@@ -1,5 +1,6 @@
 import "~/styles/globals.css";
-
+import Header from "~/components/Layout/Header";
+import Footer from "~/components/Layout/Footer";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -20,7 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>{children}</body>
+      <body className={`font-sans ${inter.variable}`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
